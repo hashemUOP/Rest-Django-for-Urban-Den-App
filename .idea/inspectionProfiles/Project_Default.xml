@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.split" />
+          <option value="electro.cat.views.shopping" />
+          <option value="electro.shopping.models.Wishlist.*" />
+          <option value="electro.shopping.models.Cart.*" />
+          <option value="dict.*" />
+          <option value="electro.home.views.*" />
+          <option value="electro.products.models.*" />
+          <option value="products.*" />
+          <option value="electro.products.views.shopping" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="XmlDuplicatedId" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>
