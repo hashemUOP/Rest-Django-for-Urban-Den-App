@@ -20,12 +20,16 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Public signup endpoints
+
     path('api/signup/', include('signup.urls')),
-    # Authentication: login + token refresh
-    path('api/login/', include('login.urls')),
+
+    path('api/token/', include('login.urls')),
 
     path('api/products/', include('products.urls')),
 
     path('api/reviews/', include('reviews.urls')),
+
+    path('api/users/', include('user_details.urls')),
+
+    path('api/favorite/', include('favorites.urls')),
 ]

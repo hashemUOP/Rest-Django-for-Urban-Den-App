@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,7 +48,8 @@ INSTALLED_APPS = [
     'favorites',
     'cart',
     'checkout',
-    'recommended_products'
+    'recommended_products',
+    'user_details'
 ]
 
 MIDDLEWARE = [
@@ -120,6 +122,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),      # access token valid for 1 day
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=365),   # refresh token valid for 1 year
+
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

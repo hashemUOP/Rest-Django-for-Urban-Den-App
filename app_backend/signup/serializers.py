@@ -10,5 +10,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = ('first_name', 'last_name', 'email', 'username', 'password')
 
     def create(self, validated_data):
+        #hashs the validated password before saving the whole validated data to db
         validated_data['password'] = make_password(validated_data['password'])
         return super().create(validated_data)
